@@ -546,8 +546,9 @@ button {
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   font-size: 12px;
   font-weight: 400;
-  line-height: 2;
   letter-spacing: 0.04em;
+  line-height: 1.5;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 }
 
 .footer-button {
@@ -558,8 +559,9 @@ button {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   color: var(--primary-white-color);
   font-family: inherit;
-  display: block;
-  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
@@ -574,6 +576,7 @@ button {
 .footer-button-icon {
   position: absolute;
   fill: var(--primary-white-color);
+  margin-left: 16px;
   right: 24px;
   top: 50%;
   transform: translateY(-50%);
@@ -802,13 +805,13 @@ button {
 }
 
 .input-label {
-  display: inline-block;
+  display: block;
   color: var(--helper-text-color);
   font-size: 12px;
   font-weight: 400;
-  line-height: 1.16;
   letter-spacing: 0.04em;
   margin-bottom: 4px;
+  line-height: 1.17;
 }
 
 .input-wrap {
@@ -855,15 +858,15 @@ button {
   border: 1px solid rgba(46, 47, 66, 0.4);
   padding: 8px 16px;
   background-color: transparent;
-  color: var(--dark-text-color);
+  color: rgba(46, 47, 66, 0.4);
   outline: transparent;
   resize: none;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   font-size: 12px;
   font-weight: 400;
-  line-height: 1.16;
   letter-spacing: 0.04em;
   margin-bottom: 8px;
+  line-height: 1.17;
 }
 
 .modal-textarea::placeholder {
@@ -883,7 +886,7 @@ button {
 }
 
 .modal-field-checkbox {
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 
 .modal-check:checked + .check-label span {
@@ -900,14 +903,13 @@ button {
   color: var(--helper-text-color);
   font-size: 12px;
   font-weight: 400;
-  line-height: 1.16;
+  line-height: 1.17;
   letter-spacing: 0.04em;
   display: flex;
   align-items: center;
 }
 
 .check-label span {
-  display: flex;
   align-items: center;
   justify-content: center;
   width: 16px;
@@ -916,6 +918,10 @@ button {
   border: 1px solid rgba(46, 47, 66, 0.4);
   margin-right: 8px;
   fill: transparent;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
 }
 
 .privacy-link {
